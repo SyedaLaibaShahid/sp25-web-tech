@@ -1,13 +1,12 @@
-********Web Development Course********
+# Web Development Course
 
-Name: Syeda Laiba Shahid, 
+**Name:** Syeda Laiba Shahid, 
 
-Roll Number: SP23-BAI-052, 
+**Roll Number:** SP23-BAI-052, 
 
-Course Instructor: Sir Usman Akram, 
+**Course Instructor:** Sir Usman Akram, 
 
-Repository Structure:
-
+**Repository Structure:**
 Assignments (4),
 Lab Tasks (4), 
 Exams (Midterm & Final)
