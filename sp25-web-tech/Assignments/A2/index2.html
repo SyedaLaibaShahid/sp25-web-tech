@@ -81,64 +81,111 @@
             body {
                 width: 100%;
             }
+            /* shipping banner */
+            .shipping-banner {
+                background: black;
+                color: white;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                font-weight: 500;
+                width: 100vw;
+                top: 5px;
+                left: 0;
+                margin: -10px;
+                position: absolute;
+            }
 
             /* Web style Styles */
-            #header {
+            header {
+                background: white;
+                padding: 10px 10px 1px 10px;
+                padding-bottom: 7px;
+                border-bottom: 1px solid #ddd;
+                position: sticky;
+                top: 0;
+                font-size: 7px;
+                font-weight: 500;
+                z-index: 1000;
+            }
+
+            .search-bar {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .search-bar input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 20px;
+                outline: none;
+            }
+            .search-bar button {
+                background: transparent;
+                border: black;
+                cursor: pointer;
+                margin-left: -30px;
+            }
+            nav {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px 80px;
-                background-color: #e3e6f3;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-                z-index: 999;
+                width: 100%;
+                padding: 23px 8px 7px 28px;
                 position: sticky;
-                top: 0;
-                left: 0;
             }
-            #header img {
-                width: 100px;
-                height: auto;
-                object-fit: contain;
-            }
-            #navbar {
+            .nav-icons {
                 display: flex;
-                justify-content: center;
-                gap: 15px;
                 align-items: center;
-                margin: 0%;
-                padding: 0%;
+                gap: 5px;
+                margin-left: auto;
             }
-            #navbar li {
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .nav-links,
+            .nav-icons {
+                position: sticky;
+                display: flex;
+                padding-right: 2px;
+                margin: 30px;
+            }
+            .nav-links li,
+            .nav-icons li {
+                margin: 0 7px;
                 list-style: none;
-                padding: 0px 15px;
-                position: relative;
             }
-            #navbar li a {
+            .nav-links a,
+            .nav-icons a {
                 text-decoration: none;
-                font-size: 18px;
-                font-weight: 600;
-                color: Black;
-                transition: 0.3s ease-in-out;
+                color: black;
+                font-size: 12px;
+                font-weight: 500;
             }
-            #navbar li a:hover {
-                text-decoration: none;
-                font-weight: 800;
-                color: blue;
+            .nav-links a:hover,
+            .nav-icons a:hover {
+                text-decoration: underline;
+                color: black;
+                font-size: 12px;
+                font-weight: 500;
             }
-            #navbar li a:hover,
-            #navbar li a.active {
-                color: blue;
-            }
-            #navbar li a.active::after,
-            #navbar li a:hover::after {
-                content: "";
-                width: 30%;
-                height: 2px;
-                background: blue;
+            .dropdown-menu {
+                display: none;
                 position: absolute;
-                bottom: -4px;
-                left: 50px;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                min-width: 150px;
+                z-index: 1000;
             }
+            .nav-links li:hover > .dropdown-menu {
+                display: block;
+            }
+
             #mobile {
                 display: none;
                 align-items: center;
@@ -146,35 +193,49 @@
             #close {
                 display: none;
             }
+
             #hero {
-                height: 90vh;
-                background-image: url("img/bg.png");
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
                 width: 100%;
-                padding: 0px 80px;
-                background-size: cover;
-                background-position: top 25% right 0;
+                padding: 0;
+            }
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background: white;
+                color: black;
+                font-weight: 700;
+                text-decoration: none;
+                margin-top: 20px;
+            }
+            .btn:hover {
+                background: #088178;
+                color: white;
+            }
+            #hero .hero-box {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
                 justify-content: center;
+                align-items: flex-start;
+                background-image: url("img/bg1.webp");
+                width: 50%;
+                height: 80vh;
+                background-size: cover;
+                background-position: center;
+                padding: 30px;
+                margin: 0;
             }
-            #hero h4 {
-                padding: bottom 15px;
+            #hero .hero-box2 {
+                background-image: url("img/bg2.webp");
             }
-            #hero h1 {
-                color: #088178;
+
+            #hero .hero-box:hover button {
+                background-color: #088178;
+                color: 1px solid #088178;
             }
-            #hero button {
-                background-image: url("img/button.png");
-                background-color: transparent;
-                color: 088178;
-                border: 0;
-                padding: 14px 80px 14px 65px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                font-weight: 700;
-                font-size: 15px;
-            }
+
             #feature {
                 display: flex;
                 align-items: center;
@@ -633,37 +694,70 @@
         </style>
     </head>
     <body>
-        <div id="header">
-            <a href="#">
-                <img src="img/logo.png" alt="Image Loading..." />
-            </a>
-            <div>
-                <ul id="navbar">
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li id="lg-bag">
-                        <a href="cart.html"
-                            ><i class="far fa-shopping-bag"></i
-                        ></a>
+        <header>
+            <div class="shipping-banner">
+                Free Shipping On Orders Over £50 (UK) £200 (International)
+            </div>
+            <nav id="navbar">
+                <div class="logo">Folk</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products..." />
+                    <button type="submit"></button>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">MEN'S <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1</a></li>
+                            <li><a href="#">Submenu 2</a></li>
+                            <li><a href="#">Submenu 3</a></li>
+                            <li><a href="#">Submenu 4</a></li>
+                            <li><a href="#">Submenu 5</a></li>
+                            <li><a href="#">Submenu 6</a></li>
+                            <li><a href="#">Submenu 7</a></li>
+                            <li><a href="#">Submenu 8</a></li>
+                            <li><a href="#">Submenu 9</a></li>
+                            <li><a href="#">Submenu 10</a></li>
+                        </ul>
                     </li>
-                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                    <li>
+                        <a href="#"
+                            >WOMEN'S <span class="arrow">&#9662;</span></a
+                        >
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1</a></li>
+                            <li><a href="#">Submenu 2</a></li>
+                            <li><a href="#">Submenu 3</a></li>
+                            <li><a href="#">Submenu 4</a></li>
+                            <li><a href="#">Submenu 5</a></li>
+                            <li><a href="#">Submenu 6</a></li>
+                            <li><a href="#">Submenu 7</a></li>
+                            <li><a href="#">Submenu 8</a></li>
+                            <li><a href="#">Submenu 9</a></li>
+                            <li><a href="#">Submenu 10</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">STORES</a></li>
+                    <li><a href="#">JOURNAL</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#" class="sale">SALE</a></li>
                 </ul>
+                <ul class="nav-icons">
+                    <li><a href="#">PKR Rs</a></li>
+                    <li><a href="#">ACCOUNT</a></li>
+                    <li><a href="#">SEARCH</a></li>
+                    <li><a href="#">CART</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="hero" class="section-hero">
+            <div class="hero-box">
+                <h1 style="color: white">Good Feelings</h1>
+                <a href="#" class="btn">Shop Now</a>
             </div>
-            <div id="mobile">
-                <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
-                <i id="bar" class="fas fa-outdent"></i>
+            <div class="hero-box hero-box2">
+                <h1 style="color: white">Spring-Summer</h1>
             </div>
-        </div>
-
-        <div id="hero">
-            <h4>Trade-in-offer</h4>
-            <h2>Super Value Deals</h2>
-            <h1>On All Products</h1>
-            <p>Save with more coupons & save up to 70% off!</p>
-            <button>Shop Now</button>
         </div>
 
         <div id="feature" class="section-p1">
@@ -1112,7 +1206,7 @@
 
         <div id="footer" class="section-p1">
             <div class="col">
-                <img class="logo" src="img/logo.png" alt="Loading.." />
+                <div class="logo">Folk</div>
                 <h4>Contact</h4>
                 <p>
                     <strong>Address:</strong> 562 Wellington Road, Street 32,
