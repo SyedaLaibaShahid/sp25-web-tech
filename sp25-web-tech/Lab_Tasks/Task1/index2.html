@@ -9,6 +9,10 @@
             rel="stylesheet"
             href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
 
         <style>
             * {
@@ -110,24 +114,11 @@
             }
 
             .search-bar {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            .search-bar input {
-                width: 100%;
-                padding: 8px;
-                border: 1px solid #ddd;
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                margin-left: 15px;
                 border-radius: 20px;
                 outline: none;
-            }
-            .search-bar button {
-                background: transparent;
-                border: black;
-                cursor: pointer;
-                margin-left: -30px;
             }
             nav {
                 display: flex;
@@ -194,46 +185,64 @@
                 display: none;
             }
 
-            #hero {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: nowrap;
-                width: 100%;
+            html,
+            body {
+                margin: 0;
                 padding: 0;
+                height: 100%;
+                overflow-x: hidden;
             }
-            .btn {
-                display: inline-block;
+            .carousel-control-prev,
+            .carousel-control-next {
+                background-color: #088178;
+                width: 40px;
+                height: 40px;
+                border-radius: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 1;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                filter: invert(1);
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .carousel-item {
+                height: 100vh;
+            }
+            .carousel-item .row {
+                height: 100%;
+            }
+            .carousel-item .col-6 {
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-align: center;
+            }
+
+            .btn-shop {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%);
                 padding: 10px 20px;
                 background: white;
                 color: black;
                 font-weight: 700;
                 text-decoration: none;
-                margin-top: 20px;
+                border: none;
+                cursor: pointer;
             }
-            .btn:hover {
+            .btn-shop:hover {
                 background: #088178;
                 color: white;
-            }
-            #hero .hero-box {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                background-image: url("img/bg1.webp");
-                width: 50%;
-                height: 80vh;
-                background-size: cover;
-                background-position: center;
-                padding: 30px;
-                margin: 0;
-            }
-            #hero .hero-box2 {
-                background-image: url("img/bg2.webp");
-            }
-
-            #hero .hero-box:hover button {
-                background-color: #088178;
-                color: 1px solid #088178;
             }
 
             #feature {
@@ -750,16 +759,117 @@
                 </ul>
             </nav>
         </header>
-        <div id="hero" class="section-hero">
-            <div class="hero-box">
-                <h1 style="color: white">Good Feelings</h1>
-                <a href="#" class="btn">Shop Now</a>
+        <section class="container-fluid px-0">
+            <div
+                id="heroCarousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div
+                                class="col-6"
+                                style="
+                                    background-image: url('img/bg/bg1.webp');
+                                    height: 100vh;
+                                "
+                            >
+                                <h1 style="color: #d0efbe; font-weight: 600">
+                                    Good Feelings
+                                </h1>
+                            </div>
+                            <div
+                                class="col-6"
+                                style="
+                                    background-image: url('img/bg/bg2.webp');
+                                    height: 100vh;
+                                "
+                            >
+                                <h1 style="color: #d0efbe; font-weight: 600">
+                                    Spring-Summer
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div
+                                class="col-6"
+                                style="
+                                    background-image: url('img/bg/bg3.png');
+                                    height: 100vh;
+                                "
+                            >
+                                <h1 style="color: #d0efbe; font-weight: 600">
+                                    Autumn Collection
+                                </h1>
+                            </div>
+                            <div
+                                class="col-6"
+                                style="
+                                    background-image: url('img/bg/bg4.png');
+                                    height: 100vh;
+                                "
+                            >
+                                <h1 style="color: black; font-weight: 600">
+                                    Winter Fashion
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div
+                                class="col-6"
+                                style="
+                                    background-image: url('img/bg/bg5.png');
+                                    height: 100vh;
+                                "
+                            >
+                                <h1 style="color: #d0efbe; font-weight: 600">
+                                    New Trends
+                                </h1>
+                            </div>
+                            <div
+                                class="col-6"
+                                style="
+                                    background-image: url('img/bg/bg6.png');
+                                    height: 100vh;
+                                "
+                            >
+                                <h1 style="color: #d0efbe; font-weight: 600">
+                                    Exclusive Deals
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#heroCarousel"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                </button>
+                <button class="btn-shop">Shop Now</button>
             </div>
-            <div class="hero-box hero-box2">
-                <h1 style="color: white">Spring-Summer</h1>
-            </div>
-        </div>
-
+        </section>
         <div id="feature" class="section-p1">
             <div class="fe-box">
                 <img src="img/features/f1.png" alt="Loading..." />
@@ -1256,9 +1366,10 @@
                 <img src="img/pay.png" alt="Loading" />
             </div>
             <div class="copyright">
-                <p>© 2025, Cara etc - HTML CSS Ecommerce Templete</p>
+                <p>© 2025, Folk etc - HTML CSS Ecommerce Templete</p>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
 <!--  -->
