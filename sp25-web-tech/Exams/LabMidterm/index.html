@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Best Ecommerce Website | ecom.com</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Spartan", sans-serif;
+            }
+            html,
+            body {
+                overflow-x: hidden;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+
+            /* Global Styles */
+            h1 {
+                font-size: 50px;
+                line-height: 64px;
+                color: #222;
+            }
+            h2 {
+                font-size: 46px;
+                line-height: 54px;
+                color: #222;
+            }
+            h4 {
+                font-size: 20px;
+                color: #222;
+            }
+            h6 {
+                font-weight: 700;
+                font-size: 12px;
+            }
+            p {
+                font-size: 16px;
+                color: #465b52;
+                margin: 15px 0 20px 0;
+            }
+            .section-p1 {
+                padding: 40px 80px;
+            }
+            .section-m1 {
+                margin: 40px 0;
+            }
+            button.normal {
+                font-size: 14px;
+                font-weight: 600;
+                padding: 15px 30px;
+                color: #000;
+                background-color: #fff;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                transition: 0.2s;
+            }
+            button.white {
+                font-size: 13px;
+                font-weight: 600;
+                padding: 11px 18px;
+                color: #fff;
+                background-color: transparent;
+                cursor: pointer;
+                border: 1px solid #fff;
+                outline: none;
+                transition: 0.2s;
+            }
+            body {
+                width: 100%;
+            }
+            /* shipping banner */
+            .shipping-banner {
+                background: black;
+                color: white;
+                text-align: center;
+                padding: 14px;
+                font-size: 12px;
+                font-weight: 500;
+                width: 100vw;
+                top: 5px;
+                left: 0;
+                margin: -10px;
+                position: absolute;
+            }
+
+            /* Web style Styles */
+            header {
+                background: white;
+                padding: 10px 10px 1px 10px;
+                padding-bottom: 7px;
+                border-bottom: 1px solid #ddd;
+                position: sticky;
+                top: 0;
+                font-size: 7px;
+                font-weight: 500;
+                z-index: 1000;
+            }
+
+            .search-bar {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .search-bar input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 20px;
+                outline: none;
+            }
+            .search-bar button {
+                background: transparent;
+                border: black;
+                cursor: pointer;
+                margin-left: -30px;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 23px 8px 7px 28px;
+                position: sticky;
+            }
+            .nav-icons {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-left: auto;
+            }
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .nav-links,
+            .nav-icons {
+                position: sticky;
+                display: flex;
+                padding-right: 2px;
+                margin: 30px;
+            }
+            .nav-links li,
+            .nav-icons li {
+                margin: 0 7px;
+                list-style: none;
+            }
+            .nav-links a,
+            .nav-icons a {
+                text-decoration: none;
+                color: black;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .nav-links a:hover,
+            .nav-icons a:hover {
+                text-decoration: underline;
+                color: black;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                min-width: 150px;
+                z-index: 1000;
+            }
+
+            .nav-links li:hover > .dropdown-menu {
+                display: block;
+            }
+
+            #mobile {
+                display: none;
+                align-items: center;
+            }
+            #close {
+                display: none;
+            }
+
+            #hero {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                width: 100%;
+                padding: 0;
+            }
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background: white;
+                color: black;
+                font-weight: 700;
+                text-decoration: none;
+                margin-top: 20px;
+            }
+            .btn:hover {
+                background: #088178;
+                color: white;
+            }
+            #hero .hero-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                background-image: url("img/bg1.webp");
+                width: 50%;
+                height: 80vh;
+                background-size: cover;
+                background-position: center;
+                padding: 30px;
+                margin: 0;
+            }
+            #hero .hero-box2 {
+                background-image: url("img/bg2.webp");
+            }
+
+            #hero .hero-box:hover button {
+                background-color: #088178;
+                color: 1px solid #088178;
+            }
+
+            #feature {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            #feature .fe-box {
+                width: 180px;
+                text-align: center;
+                padding: 25px 15px;
+                box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+                border: 1px solid #cce7d0;
+                border-radius: 4px;
+                margin: 15px 0;
+            }
+            #feature .fe-box:hover {
+                box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+            }
+            #feature .fe-box img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            #feature .fe-box h6 {
+                display: inline-block;
+                padding: 9px 8px 6px 8px;
+                line-height: 1;
+                border-radius: 4px;
+                color: #088178;
+                background-color: #fddde4;
+            }
+            #feature .fe-box:nth-child(2) h6 {
+                background-color: #d0efbe;
+            }
+            #feature .fe-box:nth-child(3) h6 {
+                background-color: #eeccaa;
+            }
+            #feature .fe-box:nth-child(4) h6 {
+                background-color: #e3cdf8;
+            }
+            #feature .fe-box:nth-child(5) h6 {
+                background-color: #bfc9e7;
+            }
+            #product {
+                text-align: center;
+            }
+            #product .pro-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding-top: 20px;
+                gap: 15px;
+                margin-top: 30px;
+            }
+            #product .pro {
+                width: 23%;
+                min-width: 250px;
+                padding: 10px 12px;
+                border: 1px solid #cce7d0;
+                border-radius: 25px;
+                cursor: pointer;
+                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+                margin: 15px 0;
+                transition: 0.2s ease;
+                position: relative;
+            }
+            #product .pro:hover {
+                box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+            }
+            #product .pro img {
+                width: 100%;
+                border-radius: 20px;
+            }
+            #product .pro .des {
+                padding: 10px 0;
+                text-align: start;
+            }
+            #product .pro .des span {
+                color: #606063;
+                font-size: 12px;
+            }
+            #product .pro .des h5 {
+                padding-top: 7px;
+                color: #1a1a1a;
+                font-size: 14px;
+            }
+            #product .pro .des i {
+                font-size: 12px;
+                color: rgb(243, 181, 25);
+            }
+            #product .pro .des h4 {
+                padding-top: 7px;
+                font-size: 15px;
+                font-weight: 700;
+                color: #088178;
+            }
+            #product .pro .cart {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 50px;
+                background-color: #e8f6ea;
+                font-weight: 500;
+                color: #088178;
+                border: 1px solid #cce7d0;
+                position: absolute;
+                bottom: 20px;
+                right: 10px;
+            }
+            #banner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-image: url("img/banners/b1.jpg");
+                width: 100%;
+                height: 40vh;
+                background-size: cover;
+                background-position: center;
+            }
+            #banner h4 {
+                color: #fff;
+                font-size: 16px;
+            }
+            #banner h2 {
+                color: #fff;
+                font-size: 30px;
+                padding: 10px 0;
+            }
+            #banner h2 span {
+                color: #ef3636;
+                font-size: 30px;
+                padding: 10px 0;
+            }
+            #banner button:hover {
+                background-color: #088178;
+                color: #fff;
+            }
+            #sm-banner {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            #sm-banner .banner-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                background-image: url("img/banners/b2.jpg");
+                min-width: 550px;
+                height: 50vh;
+                background-size: cover;
+                background-position: center;
+                padding: 30px;
+            }
+            #sm-banner .banner-box2 {
+                background-image: url("img/banners/b3.jpg");
+            }
+            #sm-banner h4 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 300;
+            }
+            #sm-banner h2 {
+                color: #fff;
+                font-size: 28px;
+                font-weight: 800;
+            }
+            #sm-banner span {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+                padding-bottom: 15px;
+            }
+            #sm-banner .banner-box:hover button {
+                background-color: #088178;
+                color: 1px solid #088178;
+            }
+            #banner3 {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 0px 80px;
+            }
+            #banner3 .banner-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                background-image: url("img/banners/b4.jpg");
+                min-width: 30%;
+                height: 30vh;
+                background-size: cover;
+                background-position: center;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            #banner3 .banner-box2 {
+                background-image: url("img/banners/b5.jpg");
+            }
+            #banner3 .banner-box3 {
+                background-image: url("img/banners/b6.jpg");
+            }
+            #banner3 h2 {
+                color: #fff;
+                font-weight: 900;
+                font-size: 22px;
+            }
+            #banner3 h3 {
+                color: #ec544e;
+                font-weight: 800;
+                font-size: 15px;
+            }
+            #newsletter {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                background-image: url("img/banners/b7.png");
+                background-repeat: no-repeat;
+                background-position: 20% 30%;
+                background-color: #041e42;
+            }
+            #newsletter h4 {
+                color: #fff;
+                font-size: 22px;
+                font-weight: 700;
+            }
+            #newsletter p {
+                color: #818ea0;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            #newsletter p span {
+                color: #ffbd27;
+            }
+            #newsletter .form {
+                display: flex;
+                width: 40%;
+            }
+            #newsletter input {
+                height: 3.125rem;
+                padding: 0 1.25em;
+                font-size: 14px;
+                width: 100%;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                outline: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            #newsletter button {
+                background-color: #088178;
+                color: #fff;
+                white-space: nowrap;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            #footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            #footer .col {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            #footer .logo {
+                margin-bottom: 30px;
+            }
+            #footer h4 {
+                font-size: 14px;
+                padding-bottom: 20px;
+            }
+            #footer p {
+                font-size: 13px;
+                margin: 0 0 8px 0;
+            }
+            #footer a {
+                font-size: 13px;
+                text-decoration: none;
+                margin-bottom: 10px;
+                color: Black;
+            }
+            #footer .follow {
+                margin-top: 20px;
+            }
+            #footer .follow i {
+                color: #465b52;
+                padding-right: 4px;
+                cursor: pointer;
+            }
+            #footer .install .row img {
+                border: 1px solid #088178;
+                border-radius: 6px;
+            }
+            #footer .install img {
+                margin: 10px 0 15px 0;
+            }
+            #footer .follow i:hover,
+            #footer a:hover {
+                color: #088178;
+            }
+            #footer .copyright {
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Media Query for iPad */
+
+            @media (max-width: 799px) {
+                .section-p1 {
+                    padding: 40px 40px;
+                }
+                #navbar {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    position: fixed;
+                    top: 0;
+                    right: -300px;
+                    height: 100vh;
+                    width: 300px;
+                    align-items: flex-start;
+                    background-color: #e3e6f3;
+                    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+                    padding: 80px 0 0 10px;
+                    transform: 0.3s;
+                }
+                #navbar .active {
+                    right: 0px;
+                }
+                #navbar li {
+                    margin: 25px;
+                }
+                #mobile {
+                    display: flex;
+                    align-items: center;
+                }
+                #mobile i {
+                    color: #1a1a1a;
+                    font-size: 24px;
+                    padding-left: 20px;
+                }
+                #close {
+                    display: initial;
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    color: #222;
+                    font-size: 24px;
+                }
+                #lg-bag {
+                    display: none;
+                }
+                #hero {
+                    height: 70vh;
+                    padding: 0px 80px;
+                    background-position: top 30% right 30%;
+                }
+                #feature {
+                    justify-content: center;
+                }
+                #feature .fe-box {
+                    margin: 15px 15px;
+                }
+                #product .pro-container {
+                    justify-content: center;
+                }
+                #product .pro {
+                    margin: 15px;
+                }
+                #banner {
+                    height: 20vh;
+                }
+                #sm-banner {
+                    justify-content: center;
+                }
+                #sm-banner .banner-box {
+                    min-width: 100%;
+                    height: 30vh;
+                    padding: 56px;
+                    margin: 15px;
+                }
+                #banner3 {
+                    padding: 0px 40px;
+                }
+                #banner3 .banner-box {
+                    width: 28%;
+                }
+                #newsletter .form {
+                    width: 70%;
+                }
+            }
+            @media (max-width: 477px) {
+                .section-p1 {
+                    padding: 20px;
+                }
+                #header {
+                    padding: 10px 30px;
+                }
+                h1 {
+                    font-size: 38px;
+                }
+                h2 {
+                    font-size: 32px;
+                }
+                #hero {
+                    padding: 0px 20px;
+                    background-position: 55%;
+                }
+                #feature .fe-box {
+                    width: 155px;
+                    margin: 0 0 15px 0;
+                }
+                #feature {
+                    justify-content: space-between;
+                }
+                #product .pro {
+                    width: 100%;
+                }
+                #banner {
+                    height: 30vh;
+                }
+                #banner h2 {
+                    font-size: 26px;
+                    padding: 7px 0;
+                }
+                #banner h2 span {
+                    font-size: 27px;
+                }
+                #sm-banner {
+                    justify-content: center;
+                }
+                #sm-banner .banner-box {
+                    height: 40vh;
+                }
+                #banner3 {
+                    padding: 0 20px;
+                }
+                #banner3 .banner-box {
+                    width: 100%;
+                }
+                #newsletter {
+                    padding: 40px 20px;
+                }
+                #newsletter .form {
+                    width: 100%;
+                }
+                #footer .copyright p {
+                    text-align: start;
+                }
+            }
+
+            .menu-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            .menu-toggle {
+                color: black;
+                padding: 14px 24px;
+                padding-top: 0;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            .menu-toggle:hover {
+                text-decoration: underline;
+            }
+
+            .mega-menu {
+                position: absolute;
+                top: 120%;
+                left: 0;
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+                padding: 30px;
+                width: 50vw;
+                display: none;
+                z-index: 100;
+            }
+
+            .menu-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                background-color: #e9ecef;
+                border-radius: 12px;
+                padding: 20px;
+                box-shadow: 0 3px 10px rgba(19, 19, 19, 0.06);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            }
+
+            .card h4 {
+                margin: 0;
+                font-size: 18px;
+                color: #4b0082; /* Indigo shade */
+            }
+
+            .card hr {
+                margin: 10px 0;
+                border: none;
+                height: 2px;
+                background-color: #4b0082;
+            }
+
+            .card p {
+                font-size: 15px;
+                color: #333;
+                line-height: 1.6;
+                margin-bottom: 16px;
+            }
+
+            .view-btn {
+                background-color: transparent; /* Remove background color */
+                color: #4b0082; /* Set text color to match your theme */
+                padding: 8px 16px;
+                font-size: 14px;
+                border: 1px solid #4b0082; /* Optional: Add border to match the theme */
+                border-radius: 6px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .view-btn:hover {
+                background-color: #00b348;
+            }
+
+            @media (max-width: 768px) {
+                .mega-menu {
+                    width: 90vw;
+                }
+
+                .menu-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="shipping-banner">
+                Free Shipping On Orders Over £50 (UK) £200 (International)
+            </div>
+            <nav id="navbar">
+                <div class="logo">Folk</div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products..." />
+                    <button type="submit"></button>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">MEN'S <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1</a></li>
+                            <li><a href="#">Submenu 2</a></li>
+                            <li><a href="#">Submenu 3</a></li>
+                            <li><a href="#">Submenu 4</a></li>
+                            <li><a href="#">Submenu 5</a></li>
+                            <li><a href="#">Submenu 6</a></li>
+                            <li><a href="#">Submenu 7</a></li>
+                            <li><a href="#">Submenu 8</a></li>
+                            <li><a href="#">Submenu 9</a></li>
+                            <li><a href="#">Submenu 10</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"
+                            >WOMEN'S <span class="arrow">&#9662;</span></a
+                        >
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1</a></li>
+                            <li><a href="#">Submenu 2</a></li>
+                            <li><a href="#">Submenu 3</a></li>
+                            <li><a href="#">Submenu 4</a></li>
+                            <li><a href="#">Submenu 5</a></li>
+                            <li><a href="#">Submenu 6</a></li>
+                            <li><a href="#">Submenu 7</a></li>
+                            <li><a href="#">Submenu 8</a></li>
+                            <li><a href="#">Submenu 9</a></li>
+                            <li><a href="#">Submenu 10</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">STORES</a></li>
+
+                    <div class="menu-container" id="menuContainer">
+                        <div class="menu-toggle" id="menuToggle">
+                            CONTENT SP25
+                        </div>
+
+                        <div class="mega-menu" id="megaMenu">
+                            <div class="menu-grid">
+                                <div class="card">
+                                    <h4>Assignment 1: CV</h4>
+                                    <hr />
+                                    <p>
+                                        Create a detailed CV using HTML & CSS
+                                        with structured sections like personal
+                                        info, education, and projects using
+                                        Flexbox and media queries.
+                                    </p>
+                                    <button class="view-btn">
+                                        <a
+                                            href="./A1/index.html"
+                                            target="_blank"
+                                            >View Task</a
+                                        >
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <h4>Assignment 2: E-Commerce Page</h4>
+                                    <hr />
+                                    <p>
+                                        Design a modern landing page for an
+                                        online store, complete with banners,
+                                        product cards, and a call-to-action
+                                        section using CSS animations.
+                                    </p>
+                                    <button class="view-btn">
+                                        <a
+                                            href="./A2/index.html"
+                                            target="_blank"
+                                            >View Task</a
+                                        >
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <h4>Lab Task 1: Bootstrap Page</h4>
+                                    <hr />
+                                    <p>
+                                        Use Bootstrap 5 grid and components to
+                                        make a fully responsive landing page
+                                        with navbar, cards, modals, and a
+                                        contact form.
+                                    </p>
+                                    <button class="view-btn">
+                                        <a
+                                            href="./Task1/index.html"
+                                            target="_blank"
+                                            >View Task</a
+                                        >
+                                    </button>
+                                </div>
+                                <div class="card">
+                                    <h4>Lab Task 2: Checkout Form</h4>
+                                    <hr />
+                                    <p>
+                                        Create a checkout form with real-time
+                                        JavaScript validation including email,
+                                        card input, and success/error messaging.
+                                    </p>
+                                    <button class="view-btn">
+                                        <a
+                                            href="./Task2/cart.html"
+                                            target="_blank"
+                                            >View Task</a
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#" class="sale">SALE</a></li>
+                </ul>
+
+                <ul class="nav-icons">
+                    <li><a href="#">PKR Rs</a></li>
+                    <li><a href="#">ACCOUNT</a></li>
+                    <li><a href="#">SEARCH</a></li>
+                    <li><a href="#">CART</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="hero" class="section-hero">
+            <div class="hero-box">
+                <h1 style="color: white">Good Feelings</h1>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="hero-box hero-box2">
+                <h1 style="color: white">Spring-Summer</h1>
+            </div>
+        </div>
+
+        <div id="feature" class="section-p1">
+            <div class="fe-box">
+                <img src="img/features/f1.png" alt="Loading..." />
+                <h6>Free Shipping</h6>
+            </div>
+            <div class="fe-box">
+                <img src="img/features/f2.png" alt="Loading..." />
+                <h6>Save Money</h6>
+            </div>
+            <div class="fe-box">
+                <img src="img/features/f3.png" alt="Loading..." />
+                <h6>Promotions</h6>
+            </div>
+            <div class="fe-box">
+                <img src="img/features/f4.png" alt="Loading..." />
+                <h6>Online Order</h6>
+            </div>
+            <div class="fe-box">
+                <img src="img/features/f5.png" alt="Loading..." />
+                <h6>24/7 Support</h6>
+            </div>
+        </div>
+
+        <div id="product" class="section-p1">
+            <h2>Featured Products</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="img/products/f1.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f2.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f3.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f4.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f5.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f6.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f7.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f8.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f9.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f10.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f11.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f12.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="banner" class="section-m1">
+            <h4>Repair Services</h4>
+            <h2>Upto <span>70% Off</span> - All T-Shirts and Accessories</h2>
+            <button class="normal">Explore More</button>
+        </div>
+
+        <div id="product" class="section-p1">
+            <h2>New Arrivals</h2>
+            <p>Summer Collection New Modern Design</p>
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="img/products/f13.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f14.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f15.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f16.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f17.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f8.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f7.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-plus"></i>
+                    </div>
+                </div>
+                <div class="pro">
+                    <img src="img/products/f4.jpg" alt="Loading..." />
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Cartoon Astronauts T-Shirts</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sm-banner" class="section-p1">
+            <div class="banner-box">
+                <h4>crazy deals</h4>
+                <h2>Buy 1 get 1 free</h2>
+                <span>The best classic dress is on sale at cera</span>
+                <button class="white">Learn More</button>
+            </div>
+            <div class="banner-box banner-box2">
+                <h4>spring/summer</h4>
+                <h2>upcomming season</h2>
+                <span>The best classic dress is on sale at cera</span>
+                <button class="white">Collection</button>
+            </div>
+        </div>
+
+        <div id="banner3">
+            <div class="banner-box">
+                <h2>SEASONAL SALE</h2>
+                <h3>Winter Collection -50% OFF</h3>
+            </div>
+            <div class="banner-box banner-box2">
+                <h2>NEW FOOTWEAR COLLLECTION</h2>
+                <h3>Spring / Summer 2025</h3>
+            </div>
+            <div class="banner-box banner-box3">
+                <h2>T-SHIRTS</h2>
+                <h3>New Trendy Prints</h3>
+            </div>
+        </div>
+
+        <div id="newsletter" class="section-p1 section-m1">
+            <div class="newtext">
+                <h4>Sign Up For Newsletter</h4>
+                <p>
+                    Get E-mail updates about our latest shop and
+                    <span>special offers.</span>
+                </p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Enter Your Email" />
+                <button class="normal">Sign Up</button>
+            </div>
+        </div>
+
+        <div id="footer" class="section-p1">
+            <div class="col">
+                <div class="logo">Folk</div>
+                <h4>Contact</h4>
+                <p>
+                    <strong>Address:</strong> 562 Wellington Road, Street 32,
+                    San Francisco
+                </p>
+                <p><strong>Phone:</strong> +01 2222 365 / (+91) 01 2345 6789</p>
+                <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <ul style="list-style: none">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <ul style="list-style: none">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">View Cart</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="row">
+                    <img src="img/apps/app.jpg" alt="Loading.." />
+                    <img src="img/apps/play.jpg" alt="Loading.." />
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="img/pay.png" alt="Loading" />
+            </div>
+            <div class="copyright">
+                <p>© 2025, Folk etc - HTML CSS Ecommerce Templete</p>
+            </div>
+        </div>
+
+        <script>
+            const toggle = document.getElementById("menuToggle");
+            const menu = document.getElementById("megaMenu");
+            const container = document.getElementById("menuContainer");
+            let isClicked = false;
+
+            toggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                isClicked = !isClicked;
+                menu.style.display = isClicked ? "block" : "none";
+            });
+
+            container.addEventListener("mouseenter", () => {
+                if (!isClicked) menu.style.display = "block";
+            });
+
+            container.addEventListener("mouseleave", () => {
+                if (!isClicked) menu.style.display = "none";
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!container.contains(e.target)) {
+                    isClicked = false;
+                    menu.style.display = "none";
+                }
+            });
+
+            function viewTask(taskName) {
+                let link;
+
+                // Set the URL based on the task name
+                switch (taskName) {
+                    case "CV Assignment":
+                        link =
+                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Assignments/A1";
+                        break;
+                    case "E-Commerce Assignment":
+                        link =
+                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Assignments/A2";
+                        break;
+                    case "Bootstrap Lab":
+                        link =
+                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Lab_Tasks/Task1";
+                        break;
+                    case "Checkout Lab":
+                        link =
+                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Lab_Tasks/Task2";
+                        break;
+                    default:
+                        link = "#";
+                }
+
+                // Open the link in a new tab
+                window.open(link, "_blank");
+            }
+        </script>
+    </body>
+</html>
+<!--  -->
+<!--  -->
