@@ -9,12 +9,6 @@
             rel="stylesheet"
             href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         />
-<<<<<<< HEAD
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        />
-=======
 
         <style>
             * {
@@ -188,7 +182,6 @@
                 min-width: 150px;
                 z-index: 1000;
             }
-
             .nav-links li:hover > .dropdown-menu {
                 display: block;
             }
@@ -698,103 +691,7 @@
                     text-align: start;
                 }
             }
-
-            .menu-container {
-                position: relative;
-                display: inline-block;
-            }
-
-            .menu-toggle {
-                color: black;
-                padding: 14px 24px;
-                padding-top: 0;
-                cursor: pointer;
-                font-size: 12px;
-            }
-
-            .menu-toggle:hover {
-                text-decoration: underline;
-            }
-
-            .mega-menu {
-                position: absolute;
-                top: 120%;
-                left: 0;
-                background-color: #ffffff;
-                border-radius: 12px;
-                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-                padding: 30px;
-                width: 50vw;
-                display: none;
-                z-index: 100;
-            }
-
-            .menu-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
-            }
-
-            .card {
-                background-color: #e9ecef;
-                border-radius: 12px;
-                padding: 20px;
-                box-shadow: 0 3px 10px rgba(19, 19, 19, 0.06);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .card:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-            }
-
-            .card h4 {
-                margin: 0;
-                font-size: 18px;
-                color: #4b0082; /* Indigo shade */
-            }
-
-            .card hr {
-                margin: 10px 0;
-                border: none;
-                height: 2px;
-                background-color: #4b0082;
-            }
-
-            .card p {
-                font-size: 15px;
-                color: #333;
-                line-height: 1.6;
-                margin-bottom: 16px;
-            }
-
-            .view-btn {
-                background-color: transparent; /* Remove background color */
-                color: #4b0082; /* Set text color to match your theme */
-                padding: 8px 16px;
-                font-size: 14px;
-                border: 1px solid #4b0082; /* Optional: Add border to match the theme */
-                border-radius: 6px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                cursor: pointer;
-            }
-
-            .view-btn:hover {
-                background-color: #00b348;
-            }
-
-            @media (max-width: 768px) {
-                .mega-menu {
-                    width: 90vw;
-                }
-
-                .menu-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
         </style>
->>>>>>> 15f29c422bd6a26d7f897f06f13623ac6cdfff6a
     </head>
     <body>
         <header>
@@ -841,95 +738,10 @@
                         </ul>
                     </li>
                     <li><a href="#">STORES</a></li>
-<<<<<<< HEAD
                     <li><a href="#">JOURNAL</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#" class="sale">SALE</a></li>
                 </ul>
-=======
-
-                    <div class="menu-container" id="menuContainer">
-                        <div class="menu-toggle" id="menuToggle">
-                            CONTENT SP25
-                        </div>
-
-                        <div class="mega-menu" id="megaMenu">
-                            <div class="menu-grid">
-                                <div class="card">
-                                    <h4>Assignment 1: CV</h4>
-                                    <hr />
-                                    <p>
-                                        Create a detailed CV using HTML & CSS
-                                        with structured sections like personal
-                                        info, education, and projects using
-                                        Flexbox and media queries.
-                                    </p>
-                                    <button class="view-btn">
-                                        <a
-                                            href="./A1/index.html"
-                                            target="_blank"
-                                            >View Task</a
-                                        >
-                                    </button>
-                                </div>
-                                <div class="card">
-                                    <h4>Assignment 2: E-Commerce Page</h4>
-                                    <hr />
-                                    <p>
-                                        Design a modern landing page for an
-                                        online store, complete with banners,
-                                        product cards, and a call-to-action
-                                        section using CSS animations.
-                                    </p>
-                                    <button class="view-btn">
-                                        <a
-                                            href="./A2/index.html"
-                                            target="_blank"
-                                            >View Task</a
-                                        >
-                                    </button>
-                                </div>
-                                <div class="card">
-                                    <h4>Lab Task 1: Bootstrap Page</h4>
-                                    <hr />
-                                    <p>
-                                        Use Bootstrap 5 grid and components to
-                                        make a fully responsive landing page
-                                        with navbar, cards, modals, and a
-                                        contact form.
-                                    </p>
-                                    <button class="view-btn">
-                                        <a
-                                            href="./Task1/index.html"
-                                            target="_blank"
-                                            >View Task</a
-                                        >
-                                    </button>
-                                </div>
-                                <div class="card">
-                                    <h4>Lab Task 2: Checkout Form</h4>
-                                    <hr />
-                                    <p>
-                                        Create a checkout form with real-time
-                                        JavaScript validation including email,
-                                        card input, and success/error messaging.
-                                    </p>
-                                    <button class="view-btn">
-                                        <a
-                                            href="./Task2/cart.html"
-                                            target="_blank"
-                                            >View Task</a
-                                        >
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#" class="sale">SALE</a></li>
-                </ul>
-
->>>>>>> 15f29c422bd6a26d7f897f06f13623ac6cdfff6a
                 <ul class="nav-icons">
                     <li><a href="#">PKR Rs</a></li>
                     <li><a href="#">ACCOUNT</a></li>
@@ -938,119 +750,6 @@
                 </ul>
             </nav>
         </header>
-<<<<<<< HEAD
-        <section class="container-fluid px-0">
-            <div
-                id="heroCarousel"
-                class="carousel slide"
-                data-bs-ride="carousel"
-            >
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div
-                                class="col-6"
-                                style="
-                                    background-image: url('img/bg/bg1.webp');
-                                    height: 100vh;
-                                "
-                            >
-                                <h1 style="color: #d0efbe; font-weight: 600">
-                                    Good Feelings
-                                </h1>
-                            </div>
-                            <div
-                                class="col-6"
-                                style="
-                                    background-image: url('img/bg/bg2.webp');
-                                    height: 100vh;
-                                "
-                            >
-                                <h1 style="color: #d0efbe; font-weight: 600">
-                                    Spring-Summer
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div
-                                class="col-6"
-                                style="
-                                    background-image: url('img/bg/bg3.png');
-                                    height: 100vh;
-                                "
-                            >
-                                <h1 style="color: #d0efbe; font-weight: 600">
-                                    Autumn Collection
-                                </h1>
-                            </div>
-                            <div
-                                class="col-6"
-                                style="
-                                    background-image: url('img/bg/bg4.png');
-                                    height: 100vh;
-                                "
-                            >
-                                <h1 style="color: black; font-weight: 600">
-                                    Winter Fashion
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div
-                                class="col-6"
-                                style="
-                                    background-image: url('img/bg/bg5.png');
-                                    height: 100vh;
-                                "
-                            >
-                                <h1 style="color: #d0efbe; font-weight: 600">
-                                    New Trends
-                                </h1>
-                            </div>
-                            <div
-                                class="col-6"
-                                style="
-                                    background-image: url('img/bg/bg6.png');
-                                    height: 100vh;
-                                "
-                            >
-                                <h1 style="color: #d0efbe; font-weight: 600">
-                                    Exclusive Deals
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#heroCarousel"
-                    data-bs-slide="prev"
-                >
-                    <span
-                        class="carousel-control-prev-icon"
-                        aria-hidden="true"
-                    ></span>
-                </button>
-                <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#heroCarousel"
-                    data-bs-slide="next"
-                >
-                    <span
-                        class="carousel-control-next-icon"
-                        aria-hidden="true"
-                    ></span>
-                </button>
-                <button class="btn-shop">Shop Now</button>
-            </div>
-        </section>
-=======
         <div id="hero" class="section-hero">
             <div class="hero-box">
                 <h1 style="color: white">Good Feelings</h1>
@@ -1061,7 +760,6 @@
             </div>
         </div>
 
->>>>>>> 15f29c422bd6a26d7f897f06f13623ac6cdfff6a
         <div id="feature" class="section-p1">
             <div class="fe-box">
                 <img src="img/features/f1.png" alt="Loading..." />
@@ -1561,67 +1259,6 @@
                 <p>© 2025, Folk etc - HTML CSS Ecommerce Templete</p>
             </div>
         </div>
-<<<<<<< HEAD
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-=======
-
-        <script>
-            const toggle = document.getElementById("menuToggle");
-            const menu = document.getElementById("megaMenu");
-            const container = document.getElementById("menuContainer");
-            let isClicked = false;
-
-            toggle.addEventListener("click", (e) => {
-                e.stopPropagation();
-                isClicked = !isClicked;
-                menu.style.display = isClicked ? "block" : "none";
-            });
-
-            container.addEventListener("mouseenter", () => {
-                if (!isClicked) menu.style.display = "block";
-            });
-
-            container.addEventListener("mouseleave", () => {
-                if (!isClicked) menu.style.display = "none";
-            });
-
-            document.addEventListener("click", (e) => {
-                if (!container.contains(e.target)) {
-                    isClicked = false;
-                    menu.style.display = "none";
-                }
-            });
-
-            function viewTask(taskName) {
-                let link;
-
-                // Set the URL based on the task name
-                switch (taskName) {
-                    case "CV Assignment":
-                        link =
-                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Assignments/A1";
-                        break;
-                    case "E-Commerce Assignment":
-                        link =
-                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Assignments/A2";
-                        break;
-                    case "Bootstrap Lab":
-                        link =
-                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Lab_Tasks/Task1";
-                        break;
-                    case "Checkout Lab":
-                        link =
-                            "https://github.com/SyedaLaibaShahid/sp25-web-tech/tree/main/sp25-web-tech/Lab_Tasks/Task2";
-                        break;
-                    default:
-                        link = "#";
-                }
-
-                // Open the link in a new tab
-                window.open(link, "_blank");
-            }
-        </script>
->>>>>>> 15f29c422bd6a26d7f897f06f13623ac6cdfff6a
     </body>
 </html>
 <!--  -->
