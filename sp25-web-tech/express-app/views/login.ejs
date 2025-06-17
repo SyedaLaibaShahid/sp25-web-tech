@@ -10,15 +10,9 @@
         <div class="container">
             <div class="form-box">
                 <h2 id="form-title">Welcome Back!</h2>
-                <form id="authForm">
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        id="nameField"
-                        class="hide"
-                    />
-                    <input type="email" placeholder="Email" required />
-                    <input type="password" placeholder="Password" required />
+                <form id="authForm" action="/login" method="POST">
+                    <input type="email" placeholder="Email" name="email" required />
+                    <input type="password" placeholder="Password" name="password" required />
                     <button type="submit">Login</button>
                 </form>
                 <p>
@@ -27,6 +21,5 @@
                 </p>
             </div>
         </div>
-        <script src="/scripts/login"></script>
     </body>
 </html>

@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/product.css" />
+
+<div class="single-product-page">
+    <div class="product-wrapper">
+        <div class="product-image">
+            <img src="<%= product.image %>" alt="<%= product.name %>" />
+        </div>
+        <div class="product-details">
+            <h2><%= product.name %></h2>
+            <h3>$<%= product.price %></h3>
+            <p class="description"><%= product.description %></p>
+            <p class="brand">Brand: <%= product.brand %></p>
+
+            <div class="rating">
+                <% for (let i = 0; i < 5; i++) { %>
+                    <% if (i < product.rating) { %>
+                        <i class="fas fa-star"></i>
+                    <% } else { %>
+                        <i class="far fa-star"></i>
+                    <% } %>
+                <% } %>
+            </div>
+
+            <div class="cart-button">
+                <a class="add-to-cart" href="/cart/add/<%= product._id %>">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

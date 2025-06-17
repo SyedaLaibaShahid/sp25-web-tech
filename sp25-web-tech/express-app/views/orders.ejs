@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Orders</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                background-color: green;
+                color: white;
+                padding: 10px;
+            }
+            img {
+                width: 100px;
+                height: auto;
+                display: block;
+                margin-bottom: 5px;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Your Orders</h1>
+
+        <% if (orders.length === 0) { %>
+        <p>No orders found.</p>
+        <% } else { %>
+        <ul>
+            <% orders.forEach(order => { %>
+            <li>
+                <strong>Order ID:</strong> <%= order._id %> <br />
+                <strong>Date:</strong> <%= order.createdAt.toDateString() %>
+                <br />
+                <strong>Items:</strong>
+                <ul>
+                    <% order.items.forEach(item => { %>
+                    <li>
+                        <img
+                            src="<%= item.product.image %>"
+                            alt="<%= item.product.name %>"
+                        />
+                        <strong><%= item.product.name %></strong><br />
+                        Qty: <%= item.quantity %> - Price: PKR <%= item.price %>
+                    </li>
+                    <% }) %>
+                </ul>
+                <hr />
+            </li>
+            <% }) %>
+        </ul>
+        <% } %>
+    </body>
+</html>

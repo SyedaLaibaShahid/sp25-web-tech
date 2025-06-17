@@ -16,12 +16,15 @@
                 Free Shipping On Orders Over £50 (UK) £200 (International)
             </div>
             <nav id="navbar">
-                <div class="logo">Folk</div>
+                <div>
+                    <li><a href="/" class="logo">Folk</a></li>
+                </div>
                 <div class="search-bar">
                     <input type="text" placeholder="Search products..." />
                     <button title="submit" type="submit"></button>
                 </div>
                 <ul class="nav-links">
+                    <li><a href="/">HOME</a></li>
                     <li>
                         <a href="#">MEN'S <span class="arrow">&#9662;</span></a>
                         <ul class="dropdown-menu">
@@ -54,22 +57,24 @@
                             <li><a href="#">Submenu 10</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">STORES</a></li>
                     <li><a href="/cv" target="_blank">CV</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#" class="sale">SALE</a></li>
+                    <li><a href="/my-orders" class="sale">OEDERS</a></li>
                 </ul>
                 <ul class="nav-icons">
-                    <li><a href="#">PKR Rs</a></li>
+                    <% if (session && session.user) { %>
+                    <li><a href="/logout">LOGOUT</a></li>
+                    <% } else { %>
                     <li><a href="/login" target="_blank">LOGIN</a></li>
                     <li><a href="/register" target="_blank">REGISTER</a></li>
-                    <li><a href="/checkout" target="_blank">CART</a></li>
+                    <% } %>
+
+                    <li><a href="/cart" target="_blank">CART</a></li>
                 </ul>
             </nav>
         </header>
-
         <%- body %>
-
         <div id="newsletter" class="section-p1 section-m1">
             <div class="newtext">
                 <h4>Sign Up For Newsletter</h4>
@@ -118,10 +123,10 @@
             <div class="col">
                 <h4>My Account</h4>
                 <ul style="list-style: none">
-                    <li><a href="#">Sign In</a></li>
-                    <li><a href="#">View Cart</a></li>
+                    <li><a href="/register">Sign In</a></li>
+                    <li><a href="/my-order">View Cart</a></li>
                     <li><a href="#">My Wishlist</a></li>
-                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="/my-orders">Track My Order</a></li>
                     <li><a href="#">Help</a></li>
                 </ul>
             </div>

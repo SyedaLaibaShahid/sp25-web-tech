@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Checkout</h1>
-        <form id="checkoutForm" onsubmit="return validateForm()">
+        <form id="checkoutForm" onsubmit="validateAndSubmitForm(event)" action="/product/placeorder" method="post">
             <!-- Full Name -->
             <label for="fullName">Full Name</label>
             <input
