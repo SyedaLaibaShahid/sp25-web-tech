@@ -1,7 +1,7 @@
 <div id="hero" class="section-hero">
     <div class="hero-box">
         <h1 style="color: white">Good Feelings</h1>
-        <a href="#" class="btn">Shop Now</a>
+        <a href="/" class="btn">Shop Now</a>
     </div>
     <div class="hero-box hero-box2">
         <h1 style="color: white">Spring-Summer</h1>
@@ -42,13 +42,12 @@
                     <span><%= product.brand %></span>
                     <h5><%= product.name %></h5>
                     <div class="star">
-                        <% for (let i = 0; i < 5; i++) { %>
-                            <% if (i < product.rating) { %>
-                                <i class="fas fa-star"></i>
-                            <% } else { %>
-                                <i class="far fa-star"></i>
-                            <% } %>
-                        <% } %>
+                        <% for (let i = 0; i < 5; i++) { %> <% if (i <
+                        product.rating) { %>
+                        <i class="fas fa-star"></i>
+                        <% } else { %>
+                        <i class="far fa-star"></i>
+                        <% } %> <% } %>
                     </div>
                     <h4>$<%= product.price %></h4>
                 </div>
@@ -60,7 +59,6 @@
         <% }) %>
     </div>
 </div>
-
 
 <div id="banner" class="section-m1">
     <h4>Repair Services</h4>

@@ -28,6 +28,7 @@ exports.placeOrder = async (req, res) => {
             user: req.session.user ? req.session.user.name : null,
             items: orderItems,
         });
+        
 
         await order.save();
 

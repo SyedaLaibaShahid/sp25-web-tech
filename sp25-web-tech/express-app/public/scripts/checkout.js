@@ -40,16 +40,18 @@ function validateForm() {
 
     // Credit Card validation
     const creditCard = document.getElementById("creditCard");
-    if (!creditCard.value.match(/^\d{16}$/)) {
+    if (!creditCard.value.match(/^\d{8}$/)) {
         document.getElementById("creditCardError").textContent =
-            "Card number must be 16 digits.";
+            "Card number must be exactly 8 digits.";
         isValid = false;
     }
 
     // Expiry Date validation
     const expiryDate = document.getElementById("expiryDate");
-    const today = new Date().toISOString().split("T")[0];
-    if (expiryDate.value < today) {
+    const selectedDate = new Date(expiryDate.value);
+    const currentDate = new Date();
+
+    if (selectedDate <= currentDate) {
         document.getElementById("expiryDateError").textContent =
             "Expiry date must be in the future.";
         isValid = false;

@@ -7,9 +7,11 @@
                 font-family: Arial, sans-serif;
             }
             h1 {
-                background-color: green;
+                background-image: url("/img/banners/b7.png");
+                background-color: #044211;
                 color: white;
                 padding: 10px;
+                margin: 0 0 15px 0;
             }
             img {
                 width: 100px;
@@ -43,7 +45,7 @@
                             alt="<%= item.product.name %>"
                         />
                         <strong><%= item.product.name %></strong><br />
-                        Qty: <%= item.quantity %> - Price: PKR <%= item.price %>
+                        Qty: <%= item.quantity %> - Price: $<%= item.price %>
                     </li>
                     <% }) %>
                 </ul>

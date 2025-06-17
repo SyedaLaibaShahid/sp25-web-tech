@@ -9,7 +9,12 @@
     </head>
     <body>
         <h1>Checkout</h1>
-        <form id="checkoutForm" onsubmit="validateAndSubmitForm(event)" action="/product/placeorder" method="post">
+        <form
+            id="checkoutForm"
+            onsubmit="validateAndSubmitForm(event)"
+            action="/product/placeorder"
+            method="post"
+        >
             <!-- Full Name -->
             <label for="fullName">Full Name</label>
             <input
@@ -58,17 +63,17 @@
             <label for="creditCard">Credit Card Number</label>
             <input
                 type="text"
-                placeholder="XXXX XXXX XXXX"
+                placeholder="XXXXXXXX"
                 id="creditCard"
                 required
-                pattern="^\d{16}$"
-                title="Card must be 16 digits"
+                pattern="^\d{8}$"
+                title="Card must be 8 digits"
             />
             <div class="error" id="creditCardError"></div>
 
             <!-- Expiry Date -->
             <label for="expiryDate">Expiry Date</label>
-            <input type="month" id="expiryDate" required />
+            <input type="date" id="expiryDate" required />
             <div class="error" id="expiryDateError"></div>
 
             <!-- CVV -->
