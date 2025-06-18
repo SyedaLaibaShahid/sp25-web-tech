@@ -1,0 +1,56 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-center">Add New Product</h2>
+
+  <form
+    action="/admin/products/add"
+    method="POST"
+    enctype="multipart/form-data"
+    class="row g-3 shadow p-4 rounded bg-light"
+  >
+    <div class="col-md-6">
+      <label for="name" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="name" name="name" required />
+    </div>
+
+    <div class="col-md-6">
+      <label for="brand" class="form-label">Brand</label>
+      <input type="text" class="form-control" id="brand" name="brand" required />
+    </div>
+
+    <div class="col-md-6">
+      <label for="category" class="form-label">Category</label>
+      <input type="text" class="form-control" id="category" name="category" required />
+    </div>
+
+    <div class="col-md-6">
+      <label for="price" class="form-label">Price ($)</label>
+      <input type="number" class="form-control" id="price" name="price" step="0.01" required />
+    </div>
+
+    <div class="col-md-6">
+      <label for="rating" class="form-label">Rating (out of 5)</label>
+      <input type="number" class="form-control" id="rating" name="rating" step="0.1" min="0" max="5" required />
+    </div>
+
+    <div class="col-md-6">
+      <label for="Stock" class="form-label">Stock</label>
+      <input type="number" class="form-control" id="Stock" name="Stock" required />
+    </div>
+
+    <div class="col-12">
+      <label for="image" class="form-label">Product Image</label>
+      <input
+        class="form-control"
+        type="file"
+        id="image"
+        name="image"
+        accept="image/*"
+        required
+      />
+    </div>
+
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success px-5">Add Product</button>
+    </div>
+  </form>
+</div>
