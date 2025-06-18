@@ -1,0 +1,47 @@
+<div class="container my-5">
+  <h2 class="mb-4 text-center">All Orders</h2>
+
+  <% if (orders.length === 0) { %>
+    <div class="alert alert-info text-center">No orders placed yet.</div>
+  <% } else { %>
+    <% orders.forEach(order => { %>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <strong>User:</strong> <%= order.user %> 
+          <span class="float-end"><strong>Placed:</strong> <%= order.createdAt.toLocaleString() %></span>
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Price (each)</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% let total = 0; %>
+                <% order.items.forEach(item => { %>
+                  <% const subtotal = item.quantity * item.price; total += subtotal; %>
+                  <tr>
+                    <td><%= item.product %></td>
+                    <td><%= item.quantity %></td>
+                    <td>$<%= item.price.toFixed(2) %></td>
+                    <td>$<%= subtotal.toFixed(2) %></td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="text-end mt-3">
+            <h5>Total: $<%= total.toFixed(2) %></h5>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  <% } %>
+</div>

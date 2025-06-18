@@ -9,7 +9,7 @@ const UserController = {
     async postLogin(req, res) {
         const { email, password } = req.body;
         const user = await User.findOne({ email });
-        if (user && (await bcrypt.compare(password, user.password))) {
+        if (user && (bcrypt.compare(password, user.password)) && !user.isAdmin) {
             req.session.user = {
                 id: user._id, 
                 name: user.name,

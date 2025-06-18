@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const expressLayouts = require("express-ejs-layouts");
-const open = require("open").default;
+const { isLoggedIn } = require("./middleware/auth");
 
 // Models
 const User = require("./models/User");
@@ -48,15 +48,17 @@ app.use((req, res, next) => {
 const productController = require("./controllers/ProductController");
 const orderController = require("./controllers/OrderController");
 const userRoutes = require("./routes/userRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 app.get("/", productController.getLandingPage);
 app.get("/products/:id", productController.getProductById);
-app.get('/cart', productController.viewCart);
-app.get('/cart/add/:id', productController.addToCart);
-app.post('/checkout', productController.viewCheckout);
-app.post('/product/placeorder', orderController.placeOrder);
+app.get("/cart", isLoggedIn, productController.viewCart);
+app.get("/cart/add/:id", isLoggedIn, productController.addToCart);
+app.post("/checkout", isLoggedIn, productController.viewCheckout);
+app.post("/product/placeorder", isLoggedIn, orderController.placeOrder);
 
 app.use("/", userRoutes);
+app.use("/admin", adminRoutes);
 
 app.get("/about", (req, res) => {
     res.render("about", { layout: "layout" });
@@ -66,7 +68,7 @@ app.get("/cv", (req, res) => {
     res.render("cv", { layout: false });
 });
 
-app.get("/checkout", (req, res) => {
+app.get("/checkout", isLoggedIn, (req, res) => {
     res.render("checkout", { layout: false });
 });
 

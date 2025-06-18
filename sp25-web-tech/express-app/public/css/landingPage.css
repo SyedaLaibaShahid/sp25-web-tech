@@ -91,31 +91,38 @@ header {
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
-    font-size: 7px;
+    font-size: 14px;
     font-weight: 500;
     z-index: 1000;
 }
 
 .search-bar {
-    flex: 1;
     display: flex;
     align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 5px 10px;
     max-width: 300px;
     margin: 0 auto;
-}
-.search-bar input {
-    width: 100%;
-    padding: 8px;
     border: 1px solid #ddd;
-    border-radius: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
     outline: none;
-}
-.search-bar button {
     background: transparent;
-    border: black;
-    cursor: pointer;
-    margin-left: -30px;
+    font-size: 14px;
 }
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -138,7 +145,6 @@ nav {
 }
 .nav-links,
 .nav-icons {
-    position: sticky;
     display: flex;
     padding-right: 2px;
     margin: 30px;
@@ -152,15 +158,14 @@ nav {
 .nav-icons a {
     text-decoration: none;
     color: black;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 700;
 }
 .nav-links a:hover,
 .nav-icons a:hover {
-    text-decoration: underline;
-    color: black;
-    font-size: 12px;
-    font-weight: 500;
+    color: rgb(7, 52, 235);
+    font-size: 16px;
+    font-weight: 700;
 }
 .dropdown-menu {
     display: none;
@@ -232,7 +237,7 @@ nav {
     flex-wrap: wrap;
 }
 #feature .fe-box {
-    width: 180px;
+    width: 150px;
     text-align: center;
     padding: 25px 15px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
@@ -267,84 +272,7 @@ nav {
 #feature .fe-box:nth-child(5) h6 {
     background-color: #bfc9e7;
 }
-#product {
-    text-align: center;
-}
-#product .pro-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    gap: 15px;
-    margin-top: 30px;
-}
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
 
-.pro {
-    flex: 0 0 calc(25% - 20px); /* Adjust for 4 items per row */
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
-#product .pro {
-    width: 23%;
-    min-width: 250px;
-    padding: 10px 12px;
-    border: 1px solid #cce7d0;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    margin: 15px 0;
-    transition: 0.2s ease;
-    position: relative;
-}
-#product .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-}
-#product .pro img {
-    width: 100%;
-    border-radius: 20px;
-}
-#product .pro .des {
-    padding: 10px 0;
-    text-align: start;
-}
-#product .pro .des span {
-    color: #606063;
-    font-size: 12px;
-}
-#product .pro .des h5 {
-    padding-top: 7px;
-    color: #1a1a1a;
-    font-size: 14px;
-}
-#product .pro .des i {
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-}
-#product .pro .des h4 {
-    padding-top: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #088178;
-}
-#product .pro .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-}
 #banner {
     display: flex;
     flex-direction: column;
@@ -376,84 +304,7 @@ nav {
     color: #fff;
 }
 
-#new-arrivals {
-    text-align: center;
-}
-#new-arrivals .pro-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    gap: 15px;
-    margin-top: 30px;
-}
-.new-arrivals-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
 
-.pro {
-    flex: 0 0 calc(25% - 20px); /* Adjust for 4 items per row */
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
-#new-arrivals .pro {
-    width: 23%;
-    min-width: 250px;
-    padding: 10px 12px;
-    border: 1px solid #cce7d0;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    margin: 15px 0;
-    transition: 0.2s ease;
-    position: relative;
-}
-#product .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-}
-#new-arrivals .pro img {
-    width: 100%;
-    border-radius: 20px;
-}
-#new-arrivals .pro .des {
-    padding: 10px 0;
-    text-align: start;
-}
-#new-arrivals .pro .des span {
-    color: #606063;
-    font-size: 12px;
-}
-#new-arrivals .pro .des h5 {
-    padding-top: 7px;
-    color: #1a1a1a;
-    font-size: 14px;
-}
-#new-arrivals .pro .des i {
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-}
-#new-arrivals .pro .des h4 {
-    padding-top: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #088178;
-}
-#new-arrivals .pro .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-}
 #sm-banner {
     display: flex;
     justify-content: space-between;
@@ -775,7 +626,7 @@ nav {
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .product-wrapper {
@@ -790,7 +641,7 @@ nav {
     max-width: 400px;
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-details {
@@ -851,7 +702,7 @@ nav {
     padding: 40px;
     max-width: 900px;
     margin: auto;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .cart-table {

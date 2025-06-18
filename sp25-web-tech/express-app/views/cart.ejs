@@ -4,34 +4,42 @@
     <h2>Your Cart</h2>
 
     <% if (cart.length === 0) { %>
-        <p>Your cart is empty.</p>
+    <p>Your cart is empty.</p>
     <% } else { %>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Image</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% let grandTotal = 0; %>
-                <% cart.forEach(item => { %>
-                    <% grandTotal += item.price * item.quantity; %>
-                    <tr>
-                        <td><%= item.name %></td>
-                        <td><img src="<%= item.image %>" alt="img" /></td>
-                        <td><%= item.quantity %></td>
-                        <td>$<%= item.price * item.quantity %></td>
-                    </tr>
-                <% }); %>
-            </tbody>
-        </table>
-        <div class="total-section">
-            <h3 style="margin-bottom: 15px;">Grand Total: $<%= grandTotal %></h3>
-            <a class="place-order" href="/checkout">Place Order</a>
-        </div>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% let grandTotal = 0; %> <% cart.forEach(item => { %> <% grandTotal
+            += item.price * item.quantity; %>
+            <tr>
+                <td><%= item.name %></td>
+                <td>
+                    <img
+                        src="/img/products/<%= item.image %>"
+                        alt="<%= item.name %>"
+                        style="width: 80px; height: auto"
+                    />
+                </td>
+
+                <td><%= item.quantity %></td>
+                <td>$<%= item.price * item.quantity %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <div class="total-section">
+        <h3 style="margin-bottom: 15px">Grand Total: $<%= grandTotal %></h3>
+        <a class="place-order text-decoration-none" href="/checkout"
+            >Place Order</a
+        >
+    </div>
     <% } %>
 </div>
