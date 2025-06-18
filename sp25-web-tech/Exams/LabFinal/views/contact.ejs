@@ -1,0 +1,20 @@
+<%- include('layout') %>
+<div class="container mt-5">
+    <h2>Contact Us / Complaint</h2>
+    <form action="/contact" method="POST">
+        <div class="mb-3">
+            <label for="orderId" class="form-label">Order ID</label>
+            <input type="text" class="form-control" name="orderId" required />
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Complaint Message</label>
+            <textarea
+                class="form-control"
+                name="message"
+                rows="5"
+                required
+            ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Complaint</button>
+    </form>
+</div>

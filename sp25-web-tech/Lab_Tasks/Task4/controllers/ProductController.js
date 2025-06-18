@@ -24,11 +24,11 @@ exports.getProductById = async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);
         if (!product) {
-            return res.status(404).send('Product not found');
+            return res.status(404).send("Product not found");
         }
-        res.render('viewProduct', { product, layout: "layout", });
+        res.render("viewProduct", { product, layout: "layout" });
     } catch (err) {
-        res.status(500).send('Server Error');
+        res.status(500).send("Server Error");
     }
 };
 
@@ -47,7 +47,9 @@ exports.addToCart = async (req, res) => {
             req.session.cart = [];
         }
 
-        const existingProduct = req.session.cart.find(item => item._id === productId);
+        const existingProduct = req.session.cart.find(
+            (item) => item._id === productId
+        );
 
         if (existingProduct) {
             existingProduct.quantity += 1;
@@ -56,11 +58,11 @@ exports.addToCart = async (req, res) => {
                 _id: product._id,
                 name: product.name,
                 price: product.price,
-                quantity: 1
+                quantity: 1,
             });
         }
 
-        res.redirect('/cart');
+        res.redirect("/cart");
     } catch (error) {
         res.status(500).send("Server error");
     }
@@ -69,10 +71,9 @@ exports.addToCart = async (req, res) => {
 // View Cart
 exports.viewCart = (req, res) => {
     const cart = req.session.cart || [];
-    res.render('cart', { cart });
+    res.render("cart", { cart });
 };
 
 exports.viewCheckout = (req, res) => {
-    res.render('checkout');
+    res.render("checkout");
 };
-

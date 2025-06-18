@@ -1,0 +1,28 @@
+<%- include('layout') %>
+<div class="container mt-5">
+    <h2>User Complaints</h2>
+    <% if (complaints.length === 0) { %>
+    <p>No complaints submitted.</p>
+    <% } else { %>
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>User</th>
+                <th>Order ID</th>
+                <th>Message</th>
+                <th>Submitted At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% complaints.forEach(c => { %>
+            <tr>
+                <td><%= c.user.email %></td>
+                <td><%= c.orderId %></td>
+                <td><%= c.message %></td>
+                <td><%= c.createdAt.toLocaleString() %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <% } %>
+</div>

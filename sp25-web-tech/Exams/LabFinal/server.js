@@ -50,6 +50,7 @@ const orderController = require("./controllers/OrderController");
 const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 
+app.use("/", userRoutes);
 app.get("/", productController.getLandingPage);
 app.get("/products/:id", productController.getProductById);
 app.get("/cart", isLoggedIn, productController.viewCart);
@@ -57,7 +58,6 @@ app.get("/cart/add/:id", isLoggedIn, productController.addToCart);
 app.post("/checkout", isLoggedIn, productController.viewCheckout);
 app.post("/product/placeorder", isLoggedIn, orderController.placeOrder);
 
-app.use("/", userRoutes);
 app.use("/admin", adminRoutes);
 
 app.get("/about", (req, res) => {
@@ -81,3 +81,4 @@ app.listen(PORT, () => {
 });
 
 // mongod --dbpath "E:\Softwares\MongoDB\data\db"
+
